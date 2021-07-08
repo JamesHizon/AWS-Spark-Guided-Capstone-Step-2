@@ -15,3 +15,5 @@ After constructing the data structure diagram, I can start the build process. Fo
 ### Azure jars
 Originally, there are ```hadoop-azure.jar``` and ```azure-storage.jar``` files to work with. Since I ran into small issue and wanted more experience with AWS, I simply used EMR Cluster with EMR Notebook to run Spark via AWS Cloud Solutions. I also used AWS S3 Bucket to store the source files and create parquet files while applying partitioning.
 
+### Screenshots
+Attached are screenshots of the data being partitioned into S3 bucket. I have ```partition=T/``` and ```partition=Q/``` inside the output path for ingested CSV files and ```partition=B/``` inside the output path for ingested JSON files. The next step would be to write code so that I will extract all data from these S3 buckets and create a new folder with all of the "Accepted CSV" and "Accepted JSON" files, as well as "Rejected Files" folder. Since I am working on a small-scale data pipeline, there are only 4 files, so I do not have a lot of files to deal with.
